@@ -227,6 +227,7 @@ public class Carreras extends javax.swing.JInternalFrame {
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/Proyecto", "root", "");
             PreparedStatement pst = cn.prepareStatement("update carreras set codigo_carrera= ?,nombre_carrera = ?,codigo_facultad = ? , estatus_carrera = ?, codigo_maestro = "+ Codigo);
 
+            
             pst.setString(1, txtcodigo.getText().trim());
             pst.setString(2, txtcarrera.getText().trim());
             pst.setString(3, txtfacultad.getText().trim());
