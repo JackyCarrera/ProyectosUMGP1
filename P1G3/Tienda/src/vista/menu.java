@@ -18,7 +18,7 @@ private Facultades Ventana1;
 private Carreras Ventana2;
 private Cursos Ventana3;
 private Secciones Ventana4;
-private Sedes Ventana5;
+private MantenimientosSedes Ventana5;
 private aulas Ventana6;
 private Jornadas Ventana7;
     Usuarios mod;
@@ -217,7 +217,7 @@ private Jornadas Ventana7;
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
-        Ventana5 = new Sedes();
+        Ventana5 = new MantenimientosSedes();
         jDesktopPane1.add(Ventana5);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
