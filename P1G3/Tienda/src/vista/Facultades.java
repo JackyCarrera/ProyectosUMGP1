@@ -205,6 +205,7 @@ public class Facultades extends javax.swing.JInternalFrame {
             txtestatus.setText("");
             label1.setText("Registro eliminado.");
 
+            
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
