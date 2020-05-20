@@ -221,6 +221,7 @@ public class Carreras extends javax.swing.JInternalFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try {
+            
             String Codigo = Buscar.getText().trim();
 
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/Proyecto", "root", "");
