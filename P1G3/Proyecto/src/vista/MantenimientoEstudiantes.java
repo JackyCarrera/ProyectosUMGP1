@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 import java.sql.ResultSet;
 /**
  *
- * @author Jacky
+ * @author Jeff
  */
 public class MantenimientoEstudiantes extends javax.swing.JInternalFrame {
 
@@ -62,15 +62,15 @@ public class MantenimientoEstudiantes extends javax.swing.JInternalFrame {
         txtcarnet = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         txtnombre = new javax.swing.JTextField();
-        registrar1 = new javax.swing.JButton();
+        btnregistrar = new javax.swing.JButton();
         txtdireccion = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txttelefono = new javax.swing.JTextField();
-        eliminar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
         Label1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        Buscar = new javax.swing.JButton();
-        modificar = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
+        btnModificar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         ESTADO = new javax.swing.JLabel();
@@ -87,35 +87,35 @@ public class MantenimientoEstudiantes extends javax.swing.JInternalFrame {
 
         jLabel2.setText("Nombre Alumno:");
 
-        registrar1.setText("Registrar");
-        registrar1.addActionListener(new java.awt.event.ActionListener() {
+        btnregistrar.setText("Registrar");
+        btnregistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registrar1ActionPerformed(evt);
+                btnregistrarActionPerformed(evt);
             }
         });
 
         jLabel3.setText("Direccion alumno:");
 
-        eliminar.setText("eliminar");
-        eliminar.addActionListener(new java.awt.event.ActionListener() {
+        btnEliminar.setText("Eliminar");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eliminarActionPerformed(evt);
+                btnEliminarActionPerformed(evt);
             }
         });
 
         jLabel4.setText("Telefono Alumno:");
 
-        Buscar.setText("Buscar");
-        Buscar.addActionListener(new java.awt.event.ActionListener() {
+        btnBuscar.setText("Buscar");
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BuscarActionPerformed(evt);
+                btnBuscarActionPerformed(evt);
             }
         });
 
-        modificar.setText("Modificar");
-        modificar.addActionListener(new java.awt.event.ActionListener() {
+        btnModificar.setText("Modificar");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modificarActionPerformed(evt);
+                btnModificarActionPerformed(evt);
             }
         });
 
@@ -134,27 +134,34 @@ public class MantenimientoEstudiantes extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnregistrar)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnModificar)
+                                .addGap(27, 27, 27)
+                                .addComponent(btnEliminar))
+                            .addComponent(jLabel8)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(Label1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 103, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(196, 196, 196)
                         .addComponent(ESTADO))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel2)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtcarnet, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28)
-                                .addComponent(Buscar))))
+                        .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtcarnet, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jLabel3)
@@ -174,24 +181,15 @@ public class MantenimientoEstudiantes extends javax.swing.JInternalFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtemail, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
-                                    .addComponent(txttelefono))))))
+                                    .addComponent(txttelefono)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnBuscar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(registrar1)
-                                .addGap(18, 18, 18)
-                                .addComponent(modificar)
-                                .addGap(27, 27, 27)
-                                .addComponent(eliminar))
-                            .addComponent(jLabel8)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(Label1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 103, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,8 +200,8 @@ public class MantenimientoEstudiantes extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Buscar))
-                .addGap(22, 22, 22)
+                    .addComponent(btnBuscar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtcarnet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -229,20 +227,20 @@ public class MantenimientoEstudiantes extends javax.swing.JInternalFrame {
                     .addComponent(txtestatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(modificar)
-                    .addComponent(eliminar)
-                    .addComponent(registrar1))
+                    .addComponent(btnModificar)
+                    .addComponent(btnEliminar)
+                    .addComponent(btnregistrar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Label1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
                 .addComponent(ESTADO)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void registrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrar1ActionPerformed
+    private void btnregistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnregistrarActionPerformed
         // Codigo para registrar alumnos en la base de datos
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Proyecto", "root", "");
@@ -270,9 +268,9 @@ public class MantenimientoEstudiantes extends javax.swing.JInternalFrame {
             System.out.print(e.getMessage());
         } 
 
-    }//GEN-LAST:event_registrar1ActionPerformed
+    }//GEN-LAST:event_btnregistrarActionPerformed
 
-    private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Proyecto", "root", "");
@@ -291,10 +289,9 @@ public class MantenimientoEstudiantes extends javax.swing.JInternalFrame {
 
         } catch (Exception e) {
         }
-    }//GEN-LAST:event_eliminarActionPerformed
+    }//GEN-LAST:event_btnEliminarActionPerformed
 
-    private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
-        //Codigo que busca en la base de datos
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Proyecto", "root", "");
@@ -312,16 +309,16 @@ public class MantenimientoEstudiantes extends javax.swing.JInternalFrame {
                 txtestatus.setText(rs.getString("estatus_alumno"));
                 cod = txtbuscar.getText();
             } else {
-                JOptionPane.showMessageDialog(null, "Cliente no registrado.");
+                JOptionPane.showMessageDialog(null, "Alumno no registrado.");
                 txtbuscar.setText("");
             }
 
         } catch (Exception e) {
             System.out.print(e.getMessage());
         }
-    }//GEN-LAST:event_BuscarActionPerformed
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
-    private void modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarActionPerformed
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
 
         try {
             String ID = txtbuscar.getText().trim();
@@ -345,20 +342,22 @@ public class MantenimientoEstudiantes extends javax.swing.JInternalFrame {
             txttelefono.setText("");
             txtemail.setText("");
             txtestatus.setText("");
-            Label1.setText("Registro eliminado.");
+            Label1.setText("Registro Modificado.");
 
         } catch (Exception e) {
             System.out.print(e.getMessage());
         }
         
-    }//GEN-LAST:event_modificarActionPerformed
+    }//GEN-LAST:event_btnModificarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Buscar;
     private javax.swing.JLabel ESTADO;
     private javax.swing.JLabel Label1;
-    private javax.swing.JButton eliminar;
+    private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnModificar;
+    private javax.swing.JButton btnregistrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -367,8 +366,6 @@ public class MantenimientoEstudiantes extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JButton modificar;
-    private javax.swing.JButton registrar1;
     private javax.swing.JTextField txtbuscar;
     private javax.swing.JTextField txtcarnet;
     private javax.swing.JTextField txtdireccion;
