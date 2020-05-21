@@ -248,7 +248,7 @@ public class Jornadas extends javax.swing.JInternalFrame {
             ResultSet rs = pst.executeQuery();
 
             if (rs.next()) {
-                txtcodigo.setText(rs.getString("codigo_jorndad"));
+                txtcodigo.setText(rs.getString("codigo_jornda"));
                 txtnombre.setText(rs.getString("nombre_jornada"));
                 txtestatus.setText(rs.getString("estatus_jornada"));
                 cod = txtbuscar.getText();

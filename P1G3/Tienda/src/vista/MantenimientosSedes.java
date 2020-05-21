@@ -265,7 +265,7 @@ public class MantenimientosSedes extends javax.swing.JInternalFrame {
             pst.setString(1, txtbuscar.getText().trim());
             pst.executeUpdate();
 
-            txtcarnet.setText("");
+            txtcarnet.setText("");//gerson 
             txtnombre.setText("");
 
             txtestatus.setText("");
