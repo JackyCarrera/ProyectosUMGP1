@@ -14,7 +14,7 @@ import java.sql.ResultSet;
  */
 /**
  *
- * @author leone
+ * @author Gerson
  */
 public class Jornadas extends javax.swing.JInternalFrame {
 

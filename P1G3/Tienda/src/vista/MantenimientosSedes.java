@@ -14,7 +14,7 @@ import java.sql.ResultSet;
  */
 /**
  *
- * @author leone
+ * @author Gerson
  */
 public class MantenimientosSedes extends javax.swing.JInternalFrame {
 
