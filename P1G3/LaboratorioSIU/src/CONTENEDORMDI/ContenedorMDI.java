@@ -8,6 +8,7 @@ package CONTENEDORMDI;
 import Mantenimiento.Facultades;
 import Mantenimiento.Cursos;
 import Mantenimiento.Carreras;
+import p.transaccionales.AsignacionMaestros;
 
 /**
  *
