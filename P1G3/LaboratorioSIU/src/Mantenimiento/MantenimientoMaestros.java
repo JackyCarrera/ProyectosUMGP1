@@ -72,6 +72,11 @@ public class MantenimientoMaestros extends javax.swing.JInternalFrame {
         ESTADO = new javax.swing.JLabel();
         Label1 = new javax.swing.JLabel();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setVisible(true);
+
         txttelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txttelefonoActionPerformed(evt);
