@@ -321,22 +321,22 @@ public class MantenimientoMaestros extends javax.swing.JInternalFrame {
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
 
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Proyecto", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3307/Proyecto", "root", "");
             PreparedStatement pst = cn.prepareStatement("select * from maestros where codigo_maestro = ?");
             pst.setString(1, txtbuscar.getText().trim());
 
             ResultSet rs = pst.executeQuery();
 
             if (rs.next()) {
-                txtcodigo.setText(rs.getString("carnet_alumno"));
-                txtnombre.setText(rs.getString("nombre_alumno"));
-                txtdireccion.setText(rs.getString("direccion_alumno"));
-                txttelefono.setText(rs.getString("telefono_alumno"));
-                txtemail.setText(rs.getString("email_alumno"));
-                txtestatus.setText(rs.getString("estatus_alumno"));
+                txtcodigo.setText(rs.getString("codigo_maestro"));
+                txtnombre.setText(rs.getString("nombre_maestro"));
+                txtdireccion.setText(rs.getString("direccion_maestro"));
+                txttelefono.setText(rs.getString("telefono_maetro"));
+                txtemail.setText(rs.getString("email_maestro"));
+                txtestatus.setText(rs.getString("estatus_maestro"));
                 cod = txtbuscar.getText();
             } else {
-                JOptionPane.showMessageDialog(null, "Maestro no registrado.");
+                JOptionPane.showMessageDialog(null, "Cliente no registrado.");
                 txtbuscar.setText("");
             }
 
