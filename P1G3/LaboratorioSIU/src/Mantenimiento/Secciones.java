@@ -15,7 +15,7 @@ import java.sql.ResultSet;
 public class Secciones extends javax.swing.JInternalFrame {
 
     private static Connection con;
-    private static final String driver = "com.mysql.jdbc.Driver";
+    private static final String driver = "Proyecto";
     private static final String user = "root";
     private static final String pass = "";
     private static final String url = "jdbc:mysql://localhost:3306/Proyecto";
