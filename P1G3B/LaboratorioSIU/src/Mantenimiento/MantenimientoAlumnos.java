@@ -76,6 +76,7 @@ FondoPanel fondo = new FondoPanel();
         ESTADO = new javax.swing.JLabel();
         Label1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
@@ -130,6 +131,8 @@ FondoPanel fondo = new FondoPanel();
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jLabel5.setText("Registro de Alumnos");
+
+        jLabel8.setText("Prueba");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -188,7 +191,10 @@ FondoPanel fondo = new FondoPanel();
                         .addGap(153, 153, 153)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Label1)
-                            .addComponent(ESTADO))))
+                            .addComponent(ESTADO)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(172, 172, 172)
+                        .addComponent(jLabel8)))
                 .addContainerGap(87, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -230,9 +236,12 @@ FondoPanel fondo = new FondoPanel();
                     .addComponent(txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ESTADO)
-                .addGap(18, 18, 18)
-                .addComponent(Label1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(ESTADO)
+                        .addGap(18, 18, 18)
+                        .addComponent(Label1))
+                    .addComponent(jLabel8))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
 
@@ -370,6 +379,7 @@ FondoPanel fondo = new FondoPanel();
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField txtbuscar;
     private javax.swing.JTextField txtcarnet;
     private javax.swing.JTextField txtdireccion;
